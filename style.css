@@ -3,20 +3,17 @@ body {
     text-align: center;
     background-color: #2c3e50;
     color: white;
+    margin: 0;
     
-    /* Remove as margens padrão do navegador */
-    margin: 0; 
-    
-    /* Centraliza o painel no meio exato da tela */
+    /* Centraliza o painel na tela tanto no PC quanto no Mobile */
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100dvh; /* Ocupa 100% da altura visível da tela no mobile */
+    min-height: 100dvh;
 }
 
 .painel {
     background-color: #34495e;
-    display: inline-block;
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
@@ -25,6 +22,19 @@ body {
     box-sizing: border-box;
 }
 
+.slots {
+    /* clamp(mínimo, ideal, máximo) - adapta o tamanho para nunca quebrar a linha */
+    font-size: clamp(2.2rem, 8vw, 3.2rem); 
+    background: #222;
+    padding: 20px 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    letter-spacing: 8px;
+    white-space: nowrap; /* Força os ícones a ficarem obrigatoriamente na mesma linha */
+    overflow: hidden;    /* Impede qualquer vazamento visual */
+    width: 100%;
+    box-sizing: border-box;
+}
 
 button {
     font-size: 1.5rem;
@@ -35,6 +45,8 @@ button {
     border: none;
     border-radius: 8px;
     transition: 0.2s;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 button:hover {
@@ -47,33 +59,16 @@ button:disabled {
 }
 
 #mensagem {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     margin-top: 20px;
     color: #f1c40f;
     font-weight: bold;
     min-height: 30px;
 }
-.slots {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 3.2rem;
-    background: #222;
-    padding: 20px 10px;
-    border-radius: 10px;
-    margin: 20px 0;
-    letter-spacing: 12px;
-    white-space: nowrap;
-    overflow: hidden; /* Garante que os ícones nunca saiam da caixa ou dobrem de linha */
-    width: 100%;
-    box-sizing: border-box;
-}
 
-/* Ajuste no Mobile para os ícones diminuírem proporcionalmente */
-@media (max-width: 600px) {
+/* Ajuste fino para telemóveis/celulares muito pequenos */
+@media (max-width: 400px) {
     .slots {
-        font-size: 2.2rem;
-        letter-spacing: 6px;
-        padding: 15px 5px;
+        letter-spacing: 4px;
     }
 }
