@@ -1,0 +1,92 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 50px;
+}
+
+.painel {
+    background-color: #34495e;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    max-width: 450px;
+    width: 90%;
+    box-sizing: border-box;
+}
+
+.slots {
+    font-size: 5rem;
+    background: #222;
+    padding: 20px 40px;
+    border-radius: 10px;
+    margin: 20px 0;
+    letter-spacing: 15px;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 15px 40px;
+    cursor: pointer;
+    background: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #c0392b;
+}
+
+button:disabled {
+    background: #7f8c8d;
+    cursor: not-allowed;
+}
+
+#mensagem {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    color: #f1c40f;
+    font-weight: bold;
+    min-height: 30px;
+}
+
+/* --- Ajustes para Telemóveis / Mobile --- */
+@media (max-width: 600px) {
+    body {
+        margin-top: 20px;
+        padding: 10px;
+    }
+
+    .painel {
+        padding: 20px 15px;
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    .slots {
+        font-size: 2.8rem;
+        padding: 15px 5px;
+        letter-spacing: 5px;
+    }
+
+    button {
+        font-size: 1.2rem;
+        padding: 12px 20px;
+        width: 100%;
+    }
+
+    #mensagem {
+        font-size: 1.1rem;
+    }
+}
